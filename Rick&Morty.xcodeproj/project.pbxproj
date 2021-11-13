@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CFB3D380274066A400C50BAB /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3D37F274066A400C50BAB /* CharactersViewController.swift */; };
+		CFB3D382274066B400C50BAB /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3D381274066B400C50BAB /* CharacterDetailsViewController.swift */; };
+		CFB3D384274066C100C50BAB /* RickAndMortyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB3D383274066C100C50BAB /* RickAndMortyModel.swift */; };
 		CFC65F9D2740663300FDE7E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC65F9C2740663300FDE7E6 /* AppDelegate.swift */; };
 		CFC65F9F2740663300FDE7E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC65F9E2740663300FDE7E6 /* SceneDelegate.swift */; };
-		CFC65FA12740663300FDE7E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC65FA02740663300FDE7E6 /* ViewController.swift */; };
 		CFC65FA42740663300FDE7E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC65FA22740663300FDE7E6 /* Main.storyboard */; };
 		CFC65FA62740663600FDE7E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC65FA52740663600FDE7E6 /* Assets.xcassets */; };
 		CFC65FA92740663600FDE7E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC65FA72740663600FDE7E6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CFB3D37F274066A400C50BAB /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		CFB3D381274066B400C50BAB /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
+		CFB3D383274066C100C50BAB /* RickAndMortyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyModel.swift; sourceTree = "<group>"; };
 		CFC65F992740663300FDE7E6 /* Rick&Morty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick&Morty.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC65F9C2740663300FDE7E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFC65F9E2740663300FDE7E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CFC65FA02740663300FDE7E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CFC65FA32740663300FDE7E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CFC65FA52740663600FDE7E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFC65FA82740663600FDE7E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,8 +62,10 @@
 			children = (
 				CFC65F9C2740663300FDE7E6 /* AppDelegate.swift */,
 				CFC65F9E2740663300FDE7E6 /* SceneDelegate.swift */,
-				CFC65FA02740663300FDE7E6 /* ViewController.swift */,
 				CFC65FA22740663300FDE7E6 /* Main.storyboard */,
+				CFB3D37F274066A400C50BAB /* CharactersViewController.swift */,
+				CFB3D381274066B400C50BAB /* CharacterDetailsViewController.swift */,
+				CFB3D383274066C100C50BAB /* RickAndMortyModel.swift */,
 				CFC65FA52740663600FDE7E6 /* Assets.xcassets */,
 				CFC65FA72740663600FDE7E6 /* LaunchScreen.storyboard */,
 				CFC65FAA2740663600FDE7E6 /* Info.plist */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFC65FA12740663300FDE7E6 /* ViewController.swift in Sources */,
 				CFC65F9D2740663300FDE7E6 /* AppDelegate.swift in Sources */,
+				CFB3D384274066C100C50BAB /* RickAndMortyModel.swift in Sources */,
+				CFB3D382274066B400C50BAB /* CharacterDetailsViewController.swift in Sources */,
 				CFC65F9F2740663300FDE7E6 /* SceneDelegate.swift in Sources */,
+				CFB3D380274066A400C50BAB /* CharactersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
