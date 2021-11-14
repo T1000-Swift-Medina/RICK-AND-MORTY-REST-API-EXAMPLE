@@ -16,8 +16,8 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        cell.textLabel?.text = rickAndMortyCharacters?.results[indexPath.row].name
-        cell.detailTextLabel?.text = rickAndMortyCharacters?.results[indexPath.row].status
+        cell.textLabel?.text = rickAndMortyCharacters?.results[indexPath.row].characterName
+        cell.detailTextLabel?.text = rickAndMortyCharacters?.results[indexPath.row].characterStatus
         
         return cell
     }

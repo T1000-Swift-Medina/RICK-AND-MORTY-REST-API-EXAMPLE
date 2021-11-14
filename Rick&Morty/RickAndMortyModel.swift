@@ -12,8 +12,17 @@ class RickAndMortyResponse : Codable {
 }
 
 struct Character : Codable {
-    var id : Int
-    var name : String
-    var status : String
-    var species : String
+    var characterID : Int
+    var characterName : String
+    var characterStatus : String
+    var characterSpecies : String
+    var characterEpisode : [String]
+    
+    enum CodingKeys : String, CodingKey {
+        case characterID = "id"
+        case characterName = "name"
+        case characterStatus = "status"
+        case characterSpecies = "species"
+        case characterEpisode = "episode"
+    }
 }
