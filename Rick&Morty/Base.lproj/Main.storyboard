@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eth-Sh-Isy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="020-Us-Okm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Rick and Morty-->
+        <!--Rick and Morty List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CharactersViewController" customModule="Rick_Morty" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,37 +25,42 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="VmT-g1-PQm" secondAttribute="bottom" id="7Xf-PP-RAq"/>
-                                    <constraint firstItem="VmT-g1-PQm" firstAttribute="top" secondItem="zMJ-Ea-X1W" secondAttribute="top" id="bW5-Fr-DRM"/>
-                                    <constraint firstItem="VmT-g1-PQm" firstAttribute="leading" secondItem="zMJ-Ea-X1W" secondAttribute="leading" constant="-44" id="gRB-nw-1Q0"/>
-                                    <constraint firstAttribute="trailing" secondItem="VmT-g1-PQm" secondAttribute="trailing" constant="-6" id="pLi-CN-6Oe"/>
+                                    <constraint firstAttribute="bottom" secondItem="VmT-g1-PQm" secondAttribute="bottom" id="BcQ-Za-Ec8"/>
+                                    <constraint firstItem="VmT-g1-PQm" firstAttribute="top" secondItem="zMJ-Ea-X1W" secondAttribute="top" id="ELo-k7-4Oa"/>
+                                    <constraint firstItem="VmT-g1-PQm" firstAttribute="leading" secondItem="zMJ-Ea-X1W" secondAttribute="leading" constant="-44" id="ONM-LT-xGs"/>
+                                    <constraint firstAttribute="trailing" secondItem="VmT-g1-PQm" secondAttribute="trailing" constant="-6" id="W5l-wG-Zfh"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nk6-6I-UMU" userLabel="Main View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="arN-kg-k4g">
-                                        <rect key="frame" x="0.0" y="86" width="414" height="724"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="arN-kg-k4g">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="arN-kg-k4g" secondAttribute="bottom" id="46F-Ar-kLC"/>
+                                    <constraint firstItem="arN-kg-k4g" firstAttribute="top" secondItem="Nk6-6I-UMU" secondAttribute="top" id="IR9-kX-7c6"/>
+                                    <constraint firstItem="arN-kg-k4g" firstAttribute="leading" secondItem="Nk6-6I-UMU" secondAttribute="leading" id="U6y-EB-kLl"/>
+                                    <constraint firstAttribute="trailing" secondItem="arN-kg-k4g" secondAttribute="trailing" id="m4W-f5-2SP"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Nk6-6I-UMU" secondAttribute="bottom" id="942-yE-lX4"/>
-                            <constraint firstAttribute="bottom" secondItem="zMJ-Ea-X1W" secondAttribute="bottom" id="If8-tJ-Rr6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nk6-6I-UMU" secondAttribute="trailing" id="RjP-Sk-tfz"/>
-                            <constraint firstItem="zMJ-Ea-X1W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="W8d-pM-qKF"/>
-                            <constraint firstItem="Nk6-6I-UMU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="haQ-vk-iGP"/>
-                            <constraint firstItem="Nk6-6I-UMU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="o5O-oF-Sr5"/>
-                            <constraint firstItem="zMJ-Ea-X1W" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sPn-AC-Yah"/>
-                            <constraint firstItem="zMJ-Ea-X1W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zY1-dR-UfB"/>
+                            <constraint firstItem="zMJ-Ea-X1W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-88" id="1X0-ku-ATZ"/>
+                            <constraint firstItem="Nk6-6I-UMU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4BB-ya-mNK"/>
+                            <constraint firstItem="zMJ-Ea-X1W" firstAttribute="leading" secondItem="Nk6-6I-UMU" secondAttribute="leading" id="AEc-mA-dG8"/>
+                            <constraint firstItem="zMJ-Ea-X1W" firstAttribute="trailing" secondItem="Nk6-6I-UMU" secondAttribute="trailing" id="KPf-i8-3HN"/>
+                            <constraint firstItem="Nk6-6I-UMU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZKY-6i-XEf"/>
+                            <constraint firstItem="Nk6-6I-UMU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jZw-zQ-MV5"/>
+                            <constraint firstItem="Nk6-6I-UMU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kBH-Am-WXk"/>
+                            <constraint firstItem="zMJ-Ea-X1W" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uR0-Bp-K4y"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Rick and Morty" id="dkH-tb-wtg"/>
+                    <navigationItem key="navigationItem" title="Rick and Morty List" id="dkH-tb-wtg"/>
                     <connections>
                         <outlet property="charactersTableView" destination="arN-kg-k4g" id="xP8-So-Aew"/>
                         <segue destination="YZ2-0M-ufm" kind="show" identifier="characterDetailsSegue" id="ykW-SU-lsO"/>
@@ -63,7 +68,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="71.651785714285708"/>
+            <point key="canvasLocation" x="1849.2753623188407" y="71.651785714285708"/>
+        </scene>
+        <!--Characters Collection Controller-->
+        <scene sceneID="vs1-1q-Kis">
+            <objects>
+                <collectionViewController id="Adc-df-iij" customClass="CharactersCollectionController" customModule="Rick_Morty" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Nnj-GX-rWH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fjy-rl-IQe">
+                            <size key="itemSize" width="300" height="300"/>
+                            <size key="estimatedItemSize" width="300" height="300"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="Adc-df-iij" id="DdI-8E-Bg2"/>
+                            <outlet property="delegate" destination="Adc-df-iij" id="Sbt-iO-7Hl"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="hOM-ZQ-Wdr"/>
+                    <connections>
+                        <segue destination="YZ2-0M-ufm" kind="show" identifier="characterDetailsCollectionSegue" id="ng7-rT-zwV"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEh-Nt-CxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1849" y="775"/>
         </scene>
         <!--Character Name-->
         <scene sceneID="xt2-es-eNf">
@@ -134,7 +169,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UaR-oE-7Zr">
-                                <rect key="frame" x="20" y="681" width="374" height="60"/>
+                                <rect key="frame" x="20" y="632" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="GOo-Wj-ixw"/>
                                 </constraints>
@@ -193,12 +228,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ra-EU-LGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1702.8985507246377" y="71.651785714285708"/>
+            <point key="canvasLocation" x="3501" y="353"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--List-->
         <scene sceneID="pQY-Xy-hwp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eth-Sh-Isy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="List" image="list.bullet.rectangle" catalog="system" id="xHf-kd-eF0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zeb-0s-dy7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -211,11 +247,54 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b4w-0c-9Lr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="71.651785714285708"/>
+            <point key="canvasLocation" x="939.13043478260875" y="71.651785714285708"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="VfW-4A-hRx">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="020-Us-Okm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GTj-IT-LiJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eth-Sh-Isy" kind="relationship" relationship="viewControllers" id="z2m-ev-2kM"/>
+                        <segue destination="jbK-Mt-JBY" kind="relationship" relationship="viewControllers" id="2QV-yk-XQx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0WK-S7-cQ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-291" y="353"/>
+        </scene>
+        <!--Collection-->
+        <scene sceneID="Pu4-Sr-3mb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jbK-Mt-JBY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Collection" image="square.grid.3x3" catalog="system" id="Fn5-TR-md9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qbx-BS-aDl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Adc-df-iij" kind="relationship" relationship="rootViewController" id="9Rf-1g-yHI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YqC-ZB-pa7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="939" y="776"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ng7-rT-zwV"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>
         <image name="rick-morty-rick" width="800" height="600"/>
+        <image name="square.grid.3x3" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

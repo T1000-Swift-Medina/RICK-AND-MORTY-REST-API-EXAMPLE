@@ -29,6 +29,7 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCharacterIndex = indexPath.row
         performSegue(withIdentifier: "characterDetailsSegue", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     @IBOutlet var charactersTableView: UITableView!
@@ -73,7 +74,7 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
             
             let characterDetailsVC = segue.destination as! CharacterDetailsViewController
             
-            characterDetailsVC.character = rickAndMortyCharacters?.results [selectedCharacterIndex]
+            characterDetailsVC.character = rickAndMortyCharacters?.results[selectedCharacterIndex]
         }
     }
 }
