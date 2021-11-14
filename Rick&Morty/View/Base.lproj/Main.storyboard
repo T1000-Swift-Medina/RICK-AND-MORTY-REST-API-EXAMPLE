@@ -70,7 +70,7 @@
             </objects>
             <point key="canvasLocation" x="1849.2753623188407" y="71.651785714285708"/>
         </scene>
-        <!--Characters Collection Controller-->
+        <!--Rick and Morty Collection-->
         <scene sceneID="vs1-1q-Kis">
             <objects>
                 <collectionViewController id="Adc-df-iij" customClass="CharactersCollectionController" customModule="Rick_Morty" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,7 +91,7 @@
                             <outlet property="delegate" destination="Adc-df-iij" id="Sbt-iO-7Hl"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="hOM-ZQ-Wdr"/>
+                    <navigationItem key="navigationItem" title="Rick and Morty Collection" id="hOM-ZQ-Wdr"/>
                     <connections>
                         <segue destination="YZ2-0M-ufm" kind="show" identifier="characterDetailsCollectionSegue" id="ng7-rT-zwV"/>
                     </connections>

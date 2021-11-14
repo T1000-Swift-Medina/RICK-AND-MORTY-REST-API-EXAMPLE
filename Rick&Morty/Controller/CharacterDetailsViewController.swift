@@ -24,6 +24,8 @@ class CharacterDetailsViewController: UIViewController {
         characterNameLabel.text = character.characterName
         characterSpeciesLabel.text = character.characterStatus
         characterEpisodeCountLabel.text = String(character.characterEpisodes.count)
+        
+        navigationController?.visibleViewController?.title = character.characterName
     }
     
     func getCharacterImage(characterImgURL : URL) {
