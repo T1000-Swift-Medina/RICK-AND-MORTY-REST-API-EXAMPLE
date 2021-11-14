@@ -8,6 +8,9 @@
 import UIKit
 
 class CharactersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var selectedCharacterIndex : Int!
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rickAndMortyCharacters?.results.count ?? 0
     }
@@ -22,7 +25,10 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCharacterIndex = indexPath.row
+        performSegue(withIdentifier: "characterDetailsSegue", sender: nil)
+    }
     
     @IBOutlet var charactersTableView: UITableView!
     override func viewDidLoad() {
@@ -61,5 +67,12 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
         }.resume()
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "characterDetailsSegue") {
+            
+            let characterDetailsVC = segue.destination as! CharacterDetailsViewController
+            
+            characterDetailsVC.character = rickAndMortyCharacters?.results [selectedCharacterIndex]
+        }
+    }
 }

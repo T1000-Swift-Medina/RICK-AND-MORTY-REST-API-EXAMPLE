@@ -16,13 +16,13 @@ struct Character : Codable {
     var characterName : String
     var characterStatus : String
     var characterSpecies : String
-    var characterEpisode : [String]
+    var characterEpisodes : [String]
     
     enum CodingKeys : String, CodingKey {
         case characterID = "id"
         case characterName = "name"
         case characterStatus = "status"
         case characterSpecies = "species"
-        case characterEpisode = "episode"
+        case characterEpisodes = "episode"
     }
 }
