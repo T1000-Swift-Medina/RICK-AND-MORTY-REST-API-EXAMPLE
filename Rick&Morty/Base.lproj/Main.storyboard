@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" title="Rick and Morty" id="dkH-tb-wtg"/>
                     <connections>
                         <outlet property="charactersTableView" destination="arN-kg-k4g" id="XBc-ki-734"/>
-                        <segue destination="YZ2-0M-ufm" kind="show" id="ykW-SU-lsO"/>
+                        <segue destination="YZ2-0M-ufm" kind="show" identifier="characterDetailsSegue" id="ykW-SU-lsO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
