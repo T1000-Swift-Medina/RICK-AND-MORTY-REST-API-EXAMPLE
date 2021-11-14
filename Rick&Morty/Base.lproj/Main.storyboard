@@ -16,23 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="arN-kg-k4g">
-                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMJ-Ea-X1W" userLabel="Background View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rick-morty-rick" translatesAutoresizingMaskIntoConstraints="NO" id="VmT-g1-PQm">
+                                        <rect key="frame" x="-44" y="0.0" width="464" height="896"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VmT-g1-PQm" secondAttribute="bottom" id="7Xf-PP-RAq"/>
+                                    <constraint firstItem="VmT-g1-PQm" firstAttribute="top" secondItem="zMJ-Ea-X1W" secondAttribute="top" id="bW5-Fr-DRM"/>
+                                    <constraint firstItem="VmT-g1-PQm" firstAttribute="leading" secondItem="zMJ-Ea-X1W" secondAttribute="leading" constant="-44" id="gRB-nw-1Q0"/>
+                                    <constraint firstAttribute="trailing" secondItem="VmT-g1-PQm" secondAttribute="trailing" constant="-6" id="pLi-CN-6Oe"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nk6-6I-UMU" userLabel="Main View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="arN-kg-k4g">
+                                        <rect key="frame" x="0.0" y="86" width="414" height="724"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="arN-kg-k4g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="T3H-qs-arb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="arN-kg-k4g" secondAttribute="trailing" id="bh4-OZ-hIx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="arN-kg-k4g" secondAttribute="bottom" id="rCQ-kN-8tZ"/>
-                            <constraint firstItem="arN-kg-k4g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sXI-U1-TH0"/>
+                            <constraint firstAttribute="bottom" secondItem="Nk6-6I-UMU" secondAttribute="bottom" id="942-yE-lX4"/>
+                            <constraint firstAttribute="bottom" secondItem="zMJ-Ea-X1W" secondAttribute="bottom" id="If8-tJ-Rr6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nk6-6I-UMU" secondAttribute="trailing" id="RjP-Sk-tfz"/>
+                            <constraint firstItem="zMJ-Ea-X1W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="W8d-pM-qKF"/>
+                            <constraint firstItem="Nk6-6I-UMU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="haQ-vk-iGP"/>
+                            <constraint firstItem="Nk6-6I-UMU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="o5O-oF-Sr5"/>
+                            <constraint firstItem="zMJ-Ea-X1W" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="sPn-AC-Yah"/>
+                            <constraint firstItem="zMJ-Ea-X1W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zY1-dR-UfB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Rick and Morty" id="dkH-tb-wtg"/>
                     <connections>
-                        <outlet property="charactersTableView" destination="arN-kg-k4g" id="XBc-ki-734"/>
+                        <outlet property="charactersTableView" destination="arN-kg-k4g" id="xP8-So-Aew"/>
                         <segue destination="YZ2-0M-ufm" kind="show" identifier="characterDetailsSegue" id="ykW-SU-lsO"/>
                     </connections>
                 </viewController>
@@ -190,6 +215,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="rick-morty-rick" width="800" height="600"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

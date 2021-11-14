@@ -21,6 +21,7 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
         cell.textLabel?.text = rickAndMortyCharacters?.results[indexPath.row].characterName
         cell.detailTextLabel?.text = rickAndMortyCharacters?.results[indexPath.row].characterStatus
+        cell.backgroundColor = UIColor.clear
         
         return cell
     }
@@ -35,7 +36,7 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
         fetchRickAndMortyCharacters()
         charactersTableView.delegate = self
         charactersTableView.dataSource = self
-        
+        charactersTableView.backgroundColor = UIColor.clear
     }
     func fetchRickAndMortyCharacters(){
         var apiURL = URLComponents()
@@ -56,7 +57,7 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
                 let jsonDecoder = JSONDecoder()
                 let characters = try jsonDecoder.decode(RickAndMortyResponse.self, from: data!)
                 self.rickAndMortyCharacters = characters
-                
+
                 print("Data Loaded")
                 DispatchQueue.main.async {
                     self.charactersTableView.reloadData()
