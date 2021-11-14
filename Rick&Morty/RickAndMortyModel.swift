@@ -17,6 +17,7 @@ struct Character : Codable {
     var characterStatus : String
     var characterSpecies : String
     var characterEpisodes : [String]
+    var characterImageURL : URL?
     
     enum CodingKeys : String, CodingKey {
         case characterID = "id"
@@ -24,5 +25,6 @@ struct Character : Codable {
         case characterStatus = "status"
         case characterSpecies = "species"
         case characterEpisodes = "episode"
+        case characterImageURL = "image"
     }
 }
