@@ -18,6 +18,7 @@ class CharacterDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getCharacterImage(characterImgURL: character.characterImageURL!)
 
         characterStatusLabel.text = character.characterStatus
         characterNameLabel.text = character.characterName
@@ -25,7 +26,17 @@ class CharacterDetailsViewController: UIViewController {
         characterEpisodeCountLabel.text = String(character.characterEpisodes.count)
     }
     
+    func getCharacterImage(characterImgURL : URL) {
+        let imageURLSession = URLSession.shared
+        
+        imageURLSession.dataTask(with: characterImgURL) { (data : Data?, response : URLResponse?, error: Error?) in
+            DispatchQueue.main.async {
+                self.characterImageView.image = UIImage(data: data!)
+            }
+        }.resume()
+    }
     @IBAction func backToCharactersButtonPressed(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
 
 }
