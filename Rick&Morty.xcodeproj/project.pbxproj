@@ -50,6 +50,7 @@
 		CF411C412740C34B00D03533 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CFB3D383274066C100C50BAB /* RickAndMortyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -57,6 +58,9 @@
 		CF411C422740C35000D03533 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CFC65FA22740663300FDE7E6 /* Main.storyboard */,
+				CF76EF892740B8EB008D59F4 /* CharacterCollectionViewCell.xib */,
+				CFC65FA72740663600FDE7E6 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -64,6 +68,10 @@
 		CF411C432740C35500D03533 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CFB3D37F274066A400C50BAB /* CharactersViewController.swift */,
+				CF66FA1D27409F8300CCD663 /* CharactersCollectionController.swift */,
+				CFB3D381274066B400C50BAB /* CharacterDetailsViewController.swift */,
+				CF76EF882740B8EB008D59F4 /* CharacterCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -92,15 +100,7 @@
 				CF411C412740C34B00D03533 /* Model */,
 				CFC65F9C2740663300FDE7E6 /* AppDelegate.swift */,
 				CFC65F9E2740663300FDE7E6 /* SceneDelegate.swift */,
-				CFC65FA22740663300FDE7E6 /* Main.storyboard */,
-				CF76EF882740B8EB008D59F4 /* CharacterCollectionViewCell.swift */,
-				CF76EF892740B8EB008D59F4 /* CharacterCollectionViewCell.xib */,
-				CF66FA1D27409F8300CCD663 /* CharactersCollectionController.swift */,
-				CFB3D37F274066A400C50BAB /* CharactersViewController.swift */,
-				CFB3D381274066B400C50BAB /* CharacterDetailsViewController.swift */,
-				CFB3D383274066C100C50BAB /* RickAndMortyModel.swift */,
 				CFC65FA52740663600FDE7E6 /* Assets.xcassets */,
-				CFC65FA72740663600FDE7E6 /* LaunchScreen.storyboard */,
 				CFC65FAA2740663600FDE7E6 /* Info.plist */,
 			);
 			path = "Rick&Morty";
