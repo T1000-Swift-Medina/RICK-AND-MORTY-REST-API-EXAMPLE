@@ -46,6 +46,16 @@
                                     <constraint firstAttribute="trailing" secondItem="arN-kg-k4g" secondAttribute="trailing" id="m4W-f5-2SP"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVm-nO-QeB">
+                                <rect key="frame" x="132" y="423" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Lmm-fo-dmd"/>
+                                    <constraint firstAttribute="height" constant="50" id="SWE-gT-Tab"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -53,16 +63,19 @@
                             <constraint firstItem="zMJ-Ea-X1W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-88" id="1X0-ku-ATZ"/>
                             <constraint firstItem="Nk6-6I-UMU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4BB-ya-mNK"/>
                             <constraint firstItem="zMJ-Ea-X1W" firstAttribute="leading" secondItem="Nk6-6I-UMU" secondAttribute="leading" id="AEc-mA-dG8"/>
+                            <constraint firstItem="iVm-nO-QeB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GPa-ON-zJg"/>
                             <constraint firstItem="zMJ-Ea-X1W" firstAttribute="trailing" secondItem="Nk6-6I-UMU" secondAttribute="trailing" id="KPf-i8-3HN"/>
                             <constraint firstItem="Nk6-6I-UMU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZKY-6i-XEf"/>
                             <constraint firstItem="Nk6-6I-UMU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="jZw-zQ-MV5"/>
                             <constraint firstItem="Nk6-6I-UMU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kBH-Am-WXk"/>
                             <constraint firstItem="zMJ-Ea-X1W" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uR0-Bp-K4y"/>
+                            <constraint firstItem="iVm-nO-QeB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wSd-tV-5Hs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Rick and Morty List" id="dkH-tb-wtg"/>
                     <connections>
                         <outlet property="charactersTableView" destination="arN-kg-k4g" id="xP8-So-Aew"/>
+                        <outlet property="loadingLabel" destination="iVm-nO-QeB" id="oMM-H1-7yd"/>
                         <segue destination="YZ2-0M-ufm" kind="show" identifier="characterDetailsSegue" id="ykW-SU-lsO"/>
                     </connections>
                 </viewController>
@@ -289,7 +302,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ng7-rT-zwV"/>
+        <segue reference="ykW-SU-lsO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet.rectangle" catalog="system" width="128" height="93"/>

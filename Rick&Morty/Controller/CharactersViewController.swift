@@ -9,13 +9,24 @@ import UIKit
 
 class CharactersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var rickAndMortyCharacters : RickAndMortyResponse?
     var selectedCharacterIndex : Int!
+
+    
+    @IBOutlet var charactersTableView: UITableView!
+    @IBOutlet var loadingLabel: UILabel!
+    
+    
+    private var apiSession : URLSession {
+        let sessionConfig = URLSessionConfiguration.default
+        sessionConfig.allowsCellularAccess = false
+        return URLSession(configuration: sessionConfig)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rickAndMortyCharacters?.results.count ?? 0
     }
     
-    var rickAndMortyCharacters : RickAndMortyResponse?
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
@@ -32,7 +43,6 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    @IBOutlet var charactersTableView: UITableView!
     override func viewDidLoad() {
         fetchRickAndMortyCharacters()
         charactersTableView.delegate = self
@@ -47,20 +57,15 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let apiRequest = URLRequest(url: apiURL.url!)
         
-        let apiSessionConfig = URLSessionConfiguration.default
-        
-        apiSessionConfig.allowsCellularAccess = false
-        
-        let apiSession = URLSession(configuration: apiSessionConfig)
-        
         apiSession.dataTask(with: apiRequest) { (data : Data?, response : URLResponse?, error : Error?) in
             do {
                 let jsonDecoder = JSONDecoder()
                 let characters = try jsonDecoder.decode(RickAndMortyResponse.self, from: data!)
                 self.rickAndMortyCharacters = characters
-
+                
                 print("Data Loaded")
                 DispatchQueue.main.async {
+                    self.loadingLabel.isHidden = true
                     self.charactersTableView.reloadData()
                 }
             } catch {
